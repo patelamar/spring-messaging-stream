@@ -1,0 +1,13 @@
+server:
+  port: 0
+spring:
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: message-distributor
+          #          group: message-distributor
+          binder: rabbit
+        output:
+          destination: message-receiver1
+          binder: rabbit
